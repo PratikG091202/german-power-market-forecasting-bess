@@ -78,11 +78,11 @@ The four duplicated local timestamps are expected during the autumn daylight-sav
 
 Electricity prices varied strongly across the analysed years.
 
-![Average Day-Ahead Electricity Price by Year](average_price_by_year.png)
+![Average Day-Ahead Electricity Price by Year](./Average%20Day-Ahead%20Electricity%20Price%20by%20Year.png)
 
 The hourly profile also shows a clear intraday pattern, with lower average prices around midday and stronger evening prices.
 
-![Average Day-Ahead Electricity Price by Hour](average_price_by_hour.png)
+![Average Day-Ahead Electricity Price by Hour](./Average%20Day-Ahead%20Electricity%20Price%20By%20Hour%20od%20Day.png)
 
 Across 2022–2025, the dataset contains:
 
@@ -100,7 +100,7 @@ Negative-price hours increased across the analysed years:
 
 The heatmap below shows when negative prices occurred most frequently by month and hour.
 
-![Negative Electricity Prices by Month and Hour](negative_price_heatmap.png)
+![Negative Electricity Prices by Month and Hour](./Negative%20Electricity%20Prices%20by%20month%20and%20hour.png)
 
 ---
 
@@ -118,7 +118,7 @@ Average market conditions were then compared between negative and non-negative p
 | Total wind generation (MWh) | 15,265.77 | 19,479.83 | +27.60% |
 | Wind + solar (MWh) | 21,632.65 | 44,561.52 | **+105.99%** |
 
-![Average Market Conditions: Negative vs Non-Negative Price Hours](negative_vs_nonnegative_market_conditions.png)
+![Average Market Conditions: Negative vs Non-Negative Price Hours](./Average%20Market%20Conditions.png)
 
 Residual load showed the strongest positive linear relationship with electricity price among the selected variables:
 
@@ -129,7 +129,7 @@ Wind + solar correlation with price:  -0.456
 
 Grouping observations by residual-load decile shows how average electricity prices rise as residual load increases.
 
-![Average Electricity Price by Residual Load Decile](price_by_residual_load_decile.png)
+![Average Electricity Price by Residual Load Decile](./Average%20Electricity%20Price%20by%20Residual%20Load%20Decile.png)
 
 These findings describe **association rather than causation**.
 
@@ -194,7 +194,7 @@ XGBoost produced the lowest validation MAE and RMSE, so it was selected for the 
 
 ### XGBoost feature importance
 
-![XGBoost Top 15 Feature Importances](xgboost_feature_importance.png)
+![XGBoost Top 15 Feature Importances](./XGBoost%20%E2%80%94%20Top%2015%20Feature%20Importances.png)
 
 The 24-hour price lag is the strongest feature in the fitted model, showing the importance of recent daily price behaviour.
 
@@ -213,7 +213,7 @@ After model selection, XGBoost was retrained using the available 2022–2024 dev
 
 A two-week sample shows that the model captures many of the broader movements in electricity prices while still missing some of the sharper price changes.
 
-![Actual vs Predicted Day-Ahead Prices](actual_vs_predicted_2025.png)
+![Actual vs Predicted Day-Ahead Prices](./Actual%20vs%20Predicted%20Day-Ahead%20Prices%20%E2%80%94%20Two-Week%20Sample.png)
 
 ---
 
@@ -277,7 +277,7 @@ XGBoost generated approximately **€5,331 more simulated P&L than persistence**
 
 The result also shows that lower forecasting error does not guarantee a better trading decision every day: XGBoost produced 9 loss-making days compared with 8 for persistence.
 
-![Cumulative Simplified BESS Arbitrage P&L](bess_cumulative_pnl_2025.png)
+![Cumulative Simplified BESS Arbitrage P&L](./Cumulative%20Simplified%20BESS%20Arbitrage%20P%26L%20%E2%80%94%202025.png)
 
 ---
 
@@ -287,15 +287,15 @@ The result also shows that lower forecasting error does not guarantee a better t
 german-power-market-forecasting-bess/
 ├── Power_Market_BESS_Project.ipynb
 ├── README.md
-├── actual_vs_predicted_2025.png
-├── average_price_by_hour.png
-├── average_price_by_year.png
-├── bess_cumulative_pnl_2025.png
-├── daily_price_spread.png
-├── negative_price_heatmap.png
-├── negative_vs_nonnegative_market_conditions.png
-├── price_by_residual_load_decile.png
-└── xgboost_feature_importance.png
+├── Actual vs Predicted Day-Ahead Prices — Two-Week Sample.png
+├── Average Day-Ahead Electricity Price By Hour od Day.png
+├── Average Day-Ahead Electricity Price by Year.png
+├── Average Electricity Price by Residual Load Decile.png
+├── Average Market Conditions.png
+├── Cumulative Simplified BESS Arbitrage P&L — 2025.png
+├── Daily Day-Ahead Electricity Price Spread.png
+├── Negative Electricity Prices by month and hour.png
+└── XGBoost — Top 15 Feature Importances.png
 ```
 
 The notebook contains the complete data-preparation, exploratory-analysis, forecasting and BESS-simulation workflow.
